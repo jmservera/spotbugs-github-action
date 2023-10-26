@@ -73,6 +73,12 @@ if [ "$DEPENDENCIES_PATH" != "" ]; then
     echo "Scanning jars with: ${DEP_CMD}"
     eval ${DEP_CMD}
     CMD="$CMD -auxclasspathFromFile /tmp/jardependencies.txt"
+    echo "Found dependencies: "
+    cat /tmp/jardependencies.txt
+fi
+
+if [ "$PROGRESS" == "true"]; then
+    CMD="$CMD -progress"
 fi
 
 if [ "$BASE_PATH" != "" ]; then
