@@ -79,7 +79,7 @@ jobs:
       # Run SpotBugs and upload the SARIF file
       - name: Run SpotBugs action
         if: always()
-        uses: abirismyname/spotbugs-github-action@v2
+        uses: jmservera/spotbugs-github-action@v0.2.0-alpha
         with:
           packages: com.example.-
           target: ./target
